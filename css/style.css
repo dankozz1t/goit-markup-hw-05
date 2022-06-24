@@ -1,4 +1,5 @@
 :root {
+  /* color */
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --white-color: #ffffff;
@@ -8,6 +9,10 @@
   --accent-color: #2196f3;
   --address-color: rgba(255, 255, 255, 0.6);
   --icon-color: #afb1b8;
+
+  /* transition */
+  --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms;
 }
 
 body {
@@ -26,7 +31,7 @@ body {
 .link {
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-time) var(--transition-cubic);
 }
 
 .link:hover,
@@ -131,7 +136,7 @@ body {
   background-color: var(--accent-color);
   border-radius: 2px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-time) var(--transition-cubic);
 }
 
 .main-nav {
@@ -157,7 +162,7 @@ body {
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-time) var(--transition-cubic);
 }
 
 .contact-link:hover,
@@ -221,8 +226,8 @@ body {
   background-color: var(--accent-color);
   cursor: pointer;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-time) var(--transition-cubic),
+    background-color var(--transition-time) var(--transition-cubic);
 }
 
 .hero-btn:hover,
@@ -242,8 +247,8 @@ body {
   background: rgba(0, 0, 0, 0.2);
   transform: scale(1);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition-time) var(--transition-cubic),
+    transform var(--transition-time) var(--transition-cubic);
 }
 
 .is-hidden {
@@ -280,8 +285,8 @@ body {
   background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-time) var(--transition-cubic),
+    border-color var(--transition-time) var(--transition-cubic);
 }
 
 .modal-close-btn:hover,
@@ -464,10 +469,9 @@ body {
 
   fill: var(--icon-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-time) var(--transition-cubic),
+    fill var(--transition-time) var(--transition-cubic),
+    border-radius var(--transition-time) var(--transition-cubic);
 }
 
 .teams-link:hover,
@@ -503,8 +507,8 @@ body {
 
   fill: var(--icon-color);
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition-time) var(--transition-cubic),
+    fill var(--transition-time) var(--transition-cubic);
 }
 
 .customer-link:hover,
@@ -590,7 +594,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--white-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-time) var(--transition-cubic);
 }
 
 .join-link:hover,
@@ -632,9 +636,9 @@ body {
   background-color: var(--section-background-color);
   cursor: pointer;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-time) var(--transition-cubic),
+    background-color var(--transition-time) var(--transition-cubic),
+    box-shadow var(--transition-time) var(--transition-cubic);
 }
 
 .filter-btn:hover,
@@ -655,7 +659,7 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-time) var(--transition-cubic);
 }
 
 .example-item:hover,
@@ -704,7 +708,7 @@ body {
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-time) var(--transition-cubic);
 }
 
 .example-link:hover .overlay-text,
